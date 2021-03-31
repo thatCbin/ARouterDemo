@@ -28,55 +28,29 @@
     class JsonServiceImpl : SerializationService {
     lateinit var mGson: Gson
     
-    /**
-     * Do your init work in this method, it well be call when processor has been load.
-     *
-     * @param context ctx
-     */
-    override fun init(context: Context?) {
-    mGson = Gson()
-    }
+
+    	override fun init(context: Context?) {
+    		mGson = Gson()
+    	}
     
-    /**
-     * Parse json to object
-     *
-     * USE @parseObject PLEASE
-     *
-     * @param input json string
-     * @param clazz object type
-     * @return instance of object
-     */
-    override fun <T : Any?> json2Object(input: String?, clazz: Class<T>?): T {
-    checkJson()
-    return mGson.fromJson(input, clazz)
-    }
+    	override fun <T : Any?> json2Object(input: String?, clazz: Class<T>?): T {
+    		checkJson()
+    		return mGson.fromJson(input, clazz)
+    	}
     
-    /**
-     * Object to json
-     *
-     * @param instance obj
-     * @return json string
-     */
-    override fun object2Json(instance: Any?): String {
-    checkJson();
-    return mGson.toJson(instance)
-    }
+    	override fun object2Json(instance: Any?): String {
+    		checkJson();
+    		return mGson.toJson(instance)
+    	}
     
-    /**
-     * Parse json to object
-     *
-     * @param input json string
-     * @param clazz object type
-     * @return instance of object
-     */
-    override fun <T : Any?> parseObject(input: String?, clazz: Type?): T {
-    checkJson()
-    return mGson.fromJson(input, clazz)
-    }
+    	override fun <T : Any?> parseObject(input: String?, clazz: Type?): T {
+    		checkJson()
+    		return mGson.fromJson(input, clazz)
+    	}
     
-    private fun checkJson() {
-    if (mGson == null) {
-    mGson = Gson()
-    }
-    }
+    	private fun checkJson() {
+    		if (mGson == null) {
+    			mGson = Gson()
+    		}
+    	}
     }
