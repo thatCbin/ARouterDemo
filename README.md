@@ -22,7 +22,7 @@
 
 3、如果要传递object类数据里面还包含了其他对象，其他对象也按照Student类的标准；
 
-##JsonServiceImpl 配置
+##JsonServiceImpl 配置 使用Gson 注:fastjson情况JsonServiceImpl.kt 中的注释掉的部分
 
     @Route(path = RouterConstant.SERVICE_Json)
     class JsonServiceImpl : SerializationService {
