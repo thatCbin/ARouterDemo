@@ -2,7 +2,13 @@
 
 ##使用这个 withObject 传递自定 Object 之前一定要配置 JsonServiceImpl
     
-    var data = TestBean("name", 10) ARouter.getInstance().build(RouterConstant.PATH_Data) .withString("KEY1", "KEY1") .withInt("KEY2", 1) .withBoolean("KEY3", true) .withObject("KEY4", data) .navigation()
+    var data = TestBean("name", 10)
+    ARouter.getInstance().build(RouterConstant.PATH_Data)
+    	.withString("KEY1", "KEY1")
+    	.withInt("KEY2", 1)
+    	.withBoolean("KEY3", true)
+    	.withObject("KEY4", data)
+    	.navigation()
 
 ##不配置的就传递自定义Object类型的话 就会提示错误
 
